@@ -1,4 +1,4 @@
-name: password-security
+name: PasswordSecurity
 services:
 - name: web
   github:

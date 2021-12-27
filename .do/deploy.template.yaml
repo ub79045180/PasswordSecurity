@@ -1,5 +1,5 @@
 spec:
-  name: password-security
+  name: PasswordSecurity
   services:
   - name: web
     git:
