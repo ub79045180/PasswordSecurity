@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block content %}
+<body style="background-color: beige; margin-top:2%;">
+    <div class="container-sm border rounded-3" style="padding-bottom: 3%; background-color: lightcyan;box-shadow: 10px 10px 5px grey;">
+        <div style="display: flex;">
+          <h1 class="mx-auto" style="width:70%; text-align: center;">Welcome to Password Generator</h1>
+          <a href="/" class="btn btn-success">Back</a>
+        </div>
+          <h3 class="mx-auto" style="width:70%; text-align: center;">Please select your preference from below:</h3>
+            <form class="mx-auto" style="width:70%;" action="/pwdgen" method="post">
+              <div>
+                <div style="width: 70%;margin-left: 25%;">
+                  <label for="chbox">Numbers</label>
+                  <input type="checkbox" name="options" value="numbers">
+                </div>
+                <div style="width: 70%;margin-left: 25%;">
+                  <label for="chbox">Letters</label>
+                  <input type="checkbox" name="options" value="letters">
+                </div>         
+                <div style="width: 70%;margin-left: 25%;">
+                  <label for="chbox">Special Characters</label>
+                  <input type="checkbox" name="options" value="s_char">
+                </div>
+                <div style="width: 70%;margin-left: 25%;">
+                  <label>Length of password</label>
+                  <input style="width:42%" type="text" name="l_pwd" placeholder="Enter a number">
+                </div>
+                <p class="mx-auto" style="width:70%; text-align: center; margin-top: 3%; color:red;">{{data1}}</p>
+                <p class="mx-auto" style="width:70%; text-align: center; font-weight: bold; color: blue;">{{data}}</p>
+                <button style="width:70%; text-align: center; margin-top: 5%; margin-left: 15%; border-radius: 25px;">Generate Password</button>
+              </div>
+            </form>
+            <hr>
+            <h3 class="mx-auto" style="width:70%; text-align: center;">We hope you get the best from what we offer. Kindly support us to keep this site running</h3>
+            <div class = "donate" id="donate-button-container" style="margin-left: 40%; margin-right: 10%; margin-top: 3%;">
+                <div id="donate-button"></div>
+                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                    <script>
+                    PayPal.Donation.Button({
+                    env:'production',
+                    hosted_button_id:'JCHHDM29Q43PG',
+                    image: {
+                    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+                    alt:'Donate with PayPal button',
+                    title:'PayPal - The safer, easier way to pay online!',
+                    }
+                    }).render('#donate-button');
+                    </script>
+            </div>
+
+
+    </div>    
+
+</body>
+
+{% endblock content %}
