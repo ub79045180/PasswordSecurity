@@ -1,8 +1,7 @@
 spec:
-  name: sample-flask
+  name: password-security
   services:
   - name: web
     git:
       branch: main
       repo_clone_url: https://github.com/ub79045180/PasswordSecurity.git
-      
